@@ -1,1 +1,23 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
 
+#app {
+  display: flex;
+}
+
+#tree-container {
+  width: 70%;
+  height: 100vh;
+  border-right: 1px solid #ccc;
+}
+
+#details-panel {
+  width: 30%;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
