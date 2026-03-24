@@ -40,11 +40,17 @@ const nodes = svg.selectAll(".node")
   .append("g")
   .attr("transform", d => `translate(${d.x},${d.y})`);
 
-nodes.append("circle")
-  .attr("r", 8)
-  .attr("fill", "green");
-
-nodes.append("text")
-  .attr("dx", 12)
-  .attr("dy", 4)
-  .text(d => d.data.name);
+const nodes = svg.selectAll(".node")
+  .data(root.descendants())
+  .enter()
+  .append("foreignObject")
+  .attr("width", 140)
+  .attr("height", 100)
+  .attr("x", d => d.x - 70)
+  .attr("y", d => d.y - 50)
+  .html(d => `
+    <div class="card">
+      <img src="${d.data.image}" />
+      <div class="name">${d.data.name}</div>
+    </div>
+  `);
