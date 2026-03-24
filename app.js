@@ -14,7 +14,7 @@ const svg = d3.select("#tree-container")
 const root = d3.hierarchy(familyData);
 
 // STEP 3: Create tree layout
-const treeLayout = d3.tree().size([height - 100, width - 200]);
+const treeLayout = d3.tree().size([width - 200, height - 100]);
 
 treeLayout(root);
 
