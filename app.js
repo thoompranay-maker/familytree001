@@ -34,11 +34,6 @@ svg.selectAll(".link")
 
 
 // STEP 5: Draw nodes
-const nodes = svg.selectAll(".node")
-  .data(root.descendants())
-  .enter()
-  .append("g")
-  .attr("transform", d => `translate(${d.x},${d.y})`);
 
 const nodes = svg.selectAll(".node")
   .data(root.descendants())
