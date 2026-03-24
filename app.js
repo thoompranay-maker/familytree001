@@ -27,9 +27,9 @@ svg.selectAll(".link")
   .attr("fill", "none")
   .attr("stroke", "#999")
   .attr("stroke-width", 2)
-  .attr("d", d3.linkHorizontal()
-    .x(d => d.y)
-    .y(d => d.x)
+  .attr("d", d3.linkVertical()
+    .x(d => d.x)
+    .y(d => d.y)
   );
 
 
