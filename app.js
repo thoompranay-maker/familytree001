@@ -38,7 +38,7 @@ const nodes = svg.selectAll(".node")
   .data(root.descendants())
   .enter()
   .append("g")
-  .attr("transform", d => `translate(${d.y},${d.x})`);
+  .attr("transform", d => `translate(${d.x},${d.y})`);
 
 nodes.append("circle")
   .attr("r", 8)
